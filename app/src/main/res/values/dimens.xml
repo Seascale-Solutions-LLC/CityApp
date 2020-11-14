@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--*******************************************************************************************
+* Copyright Seascale Consulting LLC. All Rights Reserved.                                     *
+*                                                                                             *
+* NOTICE: This source code is protected by an End-User License Agreement (the "License").     *
+* You may not use this file or its executable version except in compliance with the License.  *
+* Unless required by applicable law or agreed to in writing, software distributed under the   *
+* License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,   *
+* either express or implied. See the License for the specific language governing permissions  *
+* and limitations under the License.                                                          *
+******************************************************************************************* -->
+
+<resources>
+    <dimen name="standard_edge_margin">16dp</dimen>
+    <dimen name="titlebar_overlap_margin">72dp</dimen>
+    <dimen name="titlebar_view_bottom_margin">24dp</dimen>
+    <dimen name="titlebar_height_std">56dp</dimen>
+    <dimen name="titlebar_elevation">4dp</dimen>
+    <dimen name="emptyview_top_margin">316dp</dimen>
+
+    <!-- MainActivity CollapsingToolBar (Portrait) -->
+    <dimen name="collapsing_appbar_start">300dp</dimen>
+    <dimen name="toolbar_image_margin_top">10dp</dimen>
+    <dimen name="city_slogan_margin_top">64dp</dimen>
+    <dimen name="company_slogan_margin_start">32dp</dimen>
+    <dimen name="company_slogan_margin_bottom">8dp</dimen>
+    <!-- MainActivity (Landscape) -->
+    <dimen name="image_frame_width">250dp</dimen>
+    <dimen name="image_width_land">218dp</dimen>
+    <dimen name="image_margin_start_land">16dp</dimen>
+    <!-- List item related dimensions -->
+    <dimen name="list_item_std_height">88dp</dimen>
+    <dimen name="list_item_favorite_width">48dp</dimen>
+    <dimen name="list_item_frame_height">56dp</dimen>
+    <dimen name="list_item_business_image_width">72dp</dimen>
+    <dimen name="header_text_size">20sp</dimen>
+
+    <!-- FilterActivity related dimensions -->
+    <dimen name="filter_header_top_margin">16dp</dimen>
+    <dimen name="filter_divider_margin">24dp</dimen>
+    <dimen name="filter_header_bottom_margin">8dp</dimen>
+    <dimen name="filterblock_height_two_rows">80dp</dimen>
+    <dimen name="filterblock_height_six_rows">240dp</dimen>
+    <dimen name="filter_button_spacing">40dp</dimen>
+
+    <!-- BusinessActivity related dimensions -->
+    <dimen name="business_image_height">128dp</dimen>
+    <dimen name="business_image_margin_top">56dp</dimen>
+    <dimen name="detail_line_icon_column_width">24dp</dimen>
+    <dimen name="detail_line_label_column_width">96dp</dimen>
+    <dimen name="detail_line_spacing">8dp</dimen>
+    <dimen name="detail_edge_margin">16dp</dimen>
+    <dimen name="buttonbar_campaign_icon">24dp</dimen>
+    <dimen name="buttonbar_height">64dp</dimen>
+    <!-- Following parameter should only be used by the landscape layout -->
+    <dimen name="detail_text_width">500dp</dimen>
+
+    <!-- User notices related dimensions -->
+    <dimen name="notice_margins">16dp</dimen>
+    <dimen name="enumeration_column_width">32dp</dimen>
+    <!-- Following parameter only used by landscape layouts (different value for phone vs tablet) -->
+    <dimen name="notice_text_width">500dp</dimen>
+
+    <!-- CitySelectDialogFragment related dimensions -->
+    <dimen name="dialog_window_height">200dp</dimen>
+    <dimen name="dialog_window_width">150dp</dimen>
+
+    <!-- Tablet-Only dimensions -->
+    <dimen name="tablet_pane_elevation">4dp</dimen>
+    <dimen name="tablet_image_height">218dp</dimen>
+    <dimen name="tablet_right_pane_width">400dp</dimen>
+    <dimen name="tablet_side_margin">64dp</dimen>
+
+    <!-- Width > 600dp Only dimensions -->
+    <dimen name="tablet_max_text_width">500dp</dimen>
+    <dimen name="tablet_filter_max_width">600dp</dimen>
+</resources>

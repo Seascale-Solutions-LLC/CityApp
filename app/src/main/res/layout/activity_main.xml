@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--*******************************************************************************************
+* Copyright Seascale Consulting LLC. All Rights Reserved.                                     *
+*                                                                                             *
+* NOTICE: This source code is protected by an End-User License Agreement (the "License").     *
+* You may not use this file or its executable version except in compliance with the License.  *
+* Unless required by applicable law or agreed to in writing, software distributed under the   *
+* License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,   *
+* either express or implied. See the License for the specific language governing permissions  *
+* and limitations under the License.                                                          *
+******************************************************************************************* -->
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/StyleAdaptiveCoordinatorLayout"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/collapsing_appbar_start"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:collapsedTitleTextAppearance="@style/TitleTextColorTheme"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleTextAppearance="@style/TitleTextColorTheme"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+            <ImageView
+                android:id="@+id/appbar_city_image_port"
+                style="@style/StyleBusinessImage"
+                android:onClick="showPhotoAttribution"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.5" />
+
+            <TextView
+                android:id="@+id/appbar_city_slogan"
+                style="@style/StyleMainTextView1" />
+
+            <TextView style="@style/StyleMainTextView2" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@color/colorPrimary"
+                android:theme="@style/AppTheme.AppBarOverlay"
+                app:layout_collapseMode="pin" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- TODO: Address nestedScrollingEnabled compatibility issue -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        style="@style/StyleRecyclerView"
+        android:nestedScrollingEnabled="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <TextView
+        android:id="@+id/empty_view"
+        style="@style/StyleAdaptiveEmptyView"
+        android:layout_marginRight="@dimen/standard_edge_margin"
+        android:layout_marginEnd="@dimen/standard_edge_margin" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/filter_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/standard_edge_margin"
+        android:src="@drawable/ic_filter"
+        android:tint="@color/colorPrimaryDark" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--*******************************************************************************************
+* Copyright Seascale Consulting LLC. All Rights Reserved.                                     *
+*                                                                                             *
+* NOTICE: This source code is protected by an End-User License Agreement (the "License").     *
+* You may not use this file or its executable version except in compliance with the License.  *
+* Unless required by applicable law or agreed to in writing, software distributed under the   *
+* License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,   *
+* either express or implied. See the License for the specific language governing permissions  *
+* and limitations under the License.                                                          *
+******************************************************************************************* -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/business_fragment_scrollview"
+    style="@style/StyleAdaptiveScrollView">
+
+    <LinearLayout
+        android:id="@+id/business_info_container"
+        style="@style/StyleAdaptiveLinearLayout">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryLight">
+
+            <TextView
+                android:id="@+id/details_business_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="@dimen/standard_edge_margin"
+                android:paddingBottom="@dimen/standard_edge_margin"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/details_business_image"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/business_image_height"
+                android:layout_marginTop="@dimen/business_image_margin_top"
+                android:layout_marginBottom="@dimen/standard_edge_margin"
+                android:contentDescription="@string/business_image_content_description"
+                android:layout_gravity="center_horizontal"
+                android:transitionName="@string/shared_element_transition"/>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/detail_campaign_description"
+            style="@style/StyleCommonTextView"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorAccent"
+            android:gravity="center_horizontal"
+            android:padding="8dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/detail_business_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/standard_edge_margin"
+            android:layout_marginLeft="@dimen/standard_edge_margin"
+            android:layout_marginTop="@dimen/standard_edge_margin"
+            android:layout_marginEnd="@dimen/standard_edge_margin"
+            android:layout_marginRight="@dimen/standard_edge_margin"
+            android:gravity="center_horizontal"
+            android:textStyle="italic" />
+
+        <!-- Important Note: <include> IDs should be named such that they can be constructed
+             from the FIELD names from the Business POJO. This means the last part of the ID
+             name should match the String of the corresponding parameters in the Business class
+        -->
+        <include
+            android:id="@+id/detail_line_hours"
+            layout="@layout/detail_line_item" />
+
+        <include
+            android:id="@+id/detail_line_url"
+            layout="@layout/detail_line_item"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/detail_line_address"
+            layout="@layout/detail_line_item" />
+
+        <include
+            android:id="@+id/detail_line_phone"
+            layout="@layout/detail_line_item" />
+
+        <include
+            android:id="@+id/detail_line_email"
+            layout="@layout/detail_line_item"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/detail_line_awards"
+            layout="@layout/detail_line_item"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/detail_line_secondfilter"
+            layout="@layout/detail_line_item"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/detail_Line_special"
+            layout="@layout/detail_line_item"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/detail_line_type"
+            layout="@layout/detail_line_item"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/detail_line_price"
+            layout="@layout/detail_line_item"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/standard_edge_margin"
+            android:text="@string/button_save_business" />
+
+    </LinearLayout>
+
+</ScrollView>

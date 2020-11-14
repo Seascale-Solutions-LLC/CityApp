@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--*******************************************************************************************
+* Copyright Seascale Consulting LLC. All Rights Reserved.                                     *
+*                                                                                             *
+* NOTICE: This source code is protected by an End-User License Agreement (the "License").     *
+* You may not use this file or its executable version except in compliance with the License.  *
+* Unless required by applicable law or agreed to in writing, software distributed under the   *
+* License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,   *
+* either express or implied. See the License for the specific language governing permissions  *
+* and limitations under the License.                                                          *
+******************************************************************************************* -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/business_bottomsheet"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/buttonbar_height"
+    android:background="@color/colorPrimaryLight"
+    android:elevation="@dimen/titlebar_elevation"
+    android:orientation="horizontal"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <Button
+        android:id="@+id/buttonbar_deselect_favorite"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/buttonbar_height"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/standard_edge_margin"
+        android:layout_marginLeft="@dimen/standard_edge_margin"
+        android:layout_weight="3"
+        android:drawableStart="@drawable/ic_thumb_up_primary_light_24dp"
+        android:drawableLeft="@drawable/ic_thumb_up_primary_light_24dp"
+        android:gravity="center|center_vertical"
+        android:text="@string/buttonbar_favorite" />
+
+    <Button
+        android:id="@+id/buttonbar_select_favorite"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/buttonbar_height"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/standard_edge_margin"
+        android:layout_marginLeft="@dimen/standard_edge_margin"
+        android:layout_weight="3"
+        android:drawableStart="@drawable/ic_thumb_up_accent_24dp"
+        android:drawableLeft="@drawable/ic_thumb_up_accent_24dp"
+        android:gravity="center|center_vertical"
+        android:text="@string/buttonbar_favorite" />
+
+    <ImageView
+        android:id="@+id/buttonbar_campaign_icon"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/buttonbar_campaign_icon"
+        android:layout_marginTop="@dimen/standard_edge_margin"
+        android:layout_marginBottom="@dimen/standard_edge_margin"
+        android:layout_weight="1"
+        android:contentDescription="@string/campaign_icon_content_description" />
+
+    <TextView
+        android:id="@+id/buttonbar_has_campaign"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/buttonbar_height"
+        android:layout_marginEnd="@dimen/standard_edge_margin"
+        android:layout_marginRight="@dimen/standard_edge_margin"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:textSize="16sp" />
+
+</LinearLayout>

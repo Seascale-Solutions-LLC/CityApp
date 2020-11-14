@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--*******************************************************************************************
+* Copyright Seascale Consulting LLC. All Rights Reserved.                                     *
+*                                                                                             *
+* NOTICE: This source code is protected by an End-User License Agreement (the "License").     *
+* You may not use this file or its executable version except in compliance with the License.  *
+* Unless required by applicable law or agreed to in writing, software distributed under the   *
+* License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,   *
+* either express or implied. See the License for the specific language governing permissions  *
+* and limitations under the License.                                                          *
+******************************************************************************************* -->
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/StyleAdaptiveCoordinatorLayout"
+    tools:context=".FilterActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/filter_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar_height_std"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/titlebar_elevation"
+        android:theme="@style/AppTheme.AppBarOverlay" />
+
+    <ScrollView
+        style="@style/StyleAdaptiveScrollView">
+
+        <LinearLayout
+            style="@style/StyleAdaptiveLinearLayout" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/filter_header_top_margin"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_filter_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="onClearFiltersClicked"
+                    android:padding="@dimen/standard_edge_margin"
+                    android:text="@string/filter_preset_clear" />
+
+                <Button
+                    android:id="@+id/button_filter_recall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/filter_button_spacing"
+                    android:layout_marginLeft="@dimen/filter_button_spacing"
+                    android:onClick="onRecallFilterClicked"
+                    android:padding="@dimen/standard_edge_margin"
+                    android:text="@string/filter_recall_filter" />
+
+            </LinearLayout>
+
+            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+             Filters Preset Block
+             - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+            <TextView
+                android:id="@+id/filter_preset_header"
+                style="@style/StyleFilterHeader"
+                android:text="@string/filter_preset_header" />
+
+            <include
+                android:id="@+id/filter_preset_row_one"
+                layout="@layout/filter_block"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:id="@+id/filter_preset_row_two"
+                layout="@layout/filter_block"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+             Filters Category Block
+             - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+            <TextView
+                android:id="@+id/filter_category_header"
+                style="@style/StyleFilterHeader"
+                android:text="@string/filter_top_level" />
+
+            <Spinner
+                android:id="@+id/filter_spinner_top"
+                style="@style/StyleFilterSpinner"
+                android:entries="@array/filter_categories" />
+
+            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+             Filters Secondary Block
+             - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+            <TextView
+                android:id="@+id/filter_secondary_header"
+                style="@style/StyleFilterHeader"
+                android:text="@string/filter_second_level"
+                android:visibility="gone" />
+
+            <Spinner
+                android:id="@+id/filter_spinner_second"
+                style="@style/StyleFilterSpinner"
+                android:visibility="gone" />
+
+            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+             Filters Tertiary Block
+             - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+            <TextView
+                android:id="@+id/filter_tertiary_header"
+                style="@style/StyleFilterHeader"
+                android:text="@string/filter_tertiary"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/filter_food_special_label"
+                style="@style/StyleFilterTertiaryHeader"
+                android:text="@string/filter_special_label" />
+
+            <Spinner
+                android:id="@+id/filter_spinner_food_special"
+                style="@style/StyleFilterSpinner"
+                android:entries="@array/filter_food_special" />
+
+            <FrameLayout
+                android:id="@+id/filter_divider_1"
+                style="@style/StyleFilterDivider"
+                android:layout_marginStart="@dimen/filter_header_top_margin"
+                android:layout_marginEnd="@dimen/filter_header_top_margin" />
+
+            <TextView
+                android:id="@+id/filter_food_atmosphere_label"
+                style="@style/StyleFilterTertiaryHeader"
+                android:text="@string/filter_atmosphere_label" />
+
+            <Spinner
+                android:id="@+id/filter_spinner_food_atmosphere"
+                style="@style/StyleFilterSpinner"
+                android:entries="@array/filter_food_atmosphere" />
+
+            <FrameLayout
+                android:id="@+id/filter_divider_2"
+                style="@style/StyleFilterDivider"
+                android:layout_marginStart="@dimen/filter_header_top_margin"
+                android:layout_marginEnd="@dimen/filter_header_top_margin" />
+
+            <TextView
+                android:id="@+id/filter_food_price_label"
+                style="@style/StyleFilterTertiaryHeader"
+                android:text="@string/filter_price_label" />
+
+            <Spinner
+                android:id="@+id/filter_spinner_food_price"
+                style="@style/StyleFilterSpinner"
+                android:entries="@array/filter_food_price" />
+
+            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+             Filters Location Block
+             - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+            <TextView
+                android:id="@+id/filter_location_header"
+                style="@style/StyleFilterHeader"
+                android:text="@string/filter_location_header" />
+
+            <include
+                android:id="@+id/filter_location_row_one"
+                layout="@layout/filter_block"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:id="@+id/filter_location_row_two"
+                layout="@layout/filter_block"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/filter_location_row_three"
+                layout="@layout/filter_block"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/filter_location_row_four"
+                layout="@layout/filter_block"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/filter_location_row_five"
+                layout="@layout/filter_block"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/filter_location_row_six"
+                layout="@layout/filter_block"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+             Sort Options
+             - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+            <TextView
+                android:id="@+id/sort_header"
+                style="@style/StyleFilterHeader"
+                android:text="@string/sort_header" />
+
+            <Spinner
+                android:id="@+id/sort_spinner"
+                style="@style/StyleFilterSpinner"
+                android:entries="@array/sort_options" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/standard_edge_margin"
+                android:layout_marginBottom="@dimen/titlebar_view_bottom_margin"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_apply_filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onApplyFilterClicked"
+                    android:padding="@dimen/standard_edge_margin"
+                    android:text="@string/filter_apply" />
+
+                <Button
+                    android:id="@+id/button_save_filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/filter_button_spacing"
+                    android:layout_marginLeft="@dimen/filter_button_spacing"
+                    android:onClick="onSaveFilterClicked"
+                    android:padding="@dimen/standard_edge_margin"
+                    android:text="@string/filter_save_filter" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

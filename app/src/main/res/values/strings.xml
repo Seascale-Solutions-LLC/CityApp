@@ -1,0 +1,415 @@
+<!--*******************************************************************************************
+* Copyright Seascale Consulting LLC. All Rights Reserved.                                     *
+*                                                                                             *
+* NOTICE: This source code is protected by an End-User License Agreement (the "License").     *
+* You may not use this file or its executable version except in compliance with the License.  *
+* Unless required by applicable law or agreed to in writing, software distributed under the   *
+* License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,   *
+* either express or implied. See the License for the specific language governing permissions  *
+* and limitations under the License.                                                          *
+******************************************************************************************* -->
+
+<resources>
+    <string name="app_name" translatable="false">CityApp</string>
+    <string name="company_slogan">Support Local Small Business</string>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+     Menu Related Strings
+     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <string name="search_title">search</string>
+    <string name="menu_change_city">Select City</string>
+    <string name="menu_clear_favorites">Clear Favorites List</string>
+    <string name="menu_clear_saved">Clear Saved List</string>
+    <string name="menu_login">Business Owner Login</string>
+    <string name="menu_about_cityapp">About CityApp</string>
+    <string name="menu_privacy_policy">Privacy Policy</string>
+    <string name="menu_eula">Terms of Use</string>
+    <string name="try_again_later">Sorry, Austin is currently the only city supported. Try again
+        later as new cities are added!
+    </string>
+    <string name="dialog_dismiss">Got it!</string>
+    <string name="delete_favorites_confirmation">Careful! This will clear out all of the businesses
+        you have saved to your \"favorites\" list. Are you sure you want to do this?
+    </string>
+    <string name="delete_saved_confirmation">Careful! This will clear out all of the businesses
+        you have saved for quick access. Are you sure you want to do this?
+    </string>
+    <string name="delete_confirm">Yes</string>
+    <string name="delete_cancel">No</string>
+    <!-- CitySelectDialogFragment -->
+    <string name="dialog_fragment_city_select_prompt">Choose desired city:</string>
+    <string-array name="dialog_city_list">
+        <item>Austin</item>
+    </string-array>
+    <!-- Search hint -->
+    <string name="search_hint">Search by name or for products or services</string>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+     MainActivity Related Strings
+     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <!-- List item related strings -->
+    <string name="business_image_content_description">Image of business</string>
+    <string name="favorite_content_description">Toggle button to select business as a favorite</string>
+    <string name="alert_no_connectivity">CityApp needs to get business information from the network.
+        Please connect to a network.
+    </string>
+    <string name="alert_connectivity_dismiss">Got it!</string>
+    <string name="alert_connectivity_not_again">Do not remind me again</string>
+    <string name="no_results_to_show">Sorry, no results match your criteria. Please try again.</string>
+    <string name="shared_element_transition">shared element transition</string>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+     Notification Related Strings
+     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <string name="notification_title_one">A Special Offer Is Waiting!</string>
+    <string name="notification_title_more">Special Offers Are Waiting!</string>
+    <string name="notification_text_one">1 new special deal found!</string>
+    <string name="notification_text_more">%1$d new special deals found!</string>
+    <string name="notification_one_more">+1 additional offer</string>
+    <string name="notification_more_campaigns">+%1$d additional offers</string>
+    <string name="main_notification_channel_name" translatable="false">Primary</string>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    BusinessActivity Related Strings
+     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <string name="business_task_name">Business Details</string>
+    <!-- Important Note: String names should be named such that the resource ID can be constructed
+         from the FIELD names from the Business POJO. This means the last part of the array name
+         should match the String of the corresponding parameters in the Business class -->
+    <string name="detail_label_hours">Hours:</string>
+    <string name="detail_label_url">Website:</string>
+    <string name="detail_label_address">Address:</string>
+    <string name="detail_label_phone">Phone:</string>
+    <string name="detail_label_email">Email:</string>
+    <string name="detail_label_awards">Awards:</string>
+    <string name="detail_label_secondfilter">Genre:</string>
+    <string name="detail_label_special">Special:</string>
+    <string name="detail_label_type">Atmosphere:</string>
+    <string name="detail_label_price">Price:</string>
+    <string name="buttonbar_favorite">Favorite</string>
+    <string name="buttonbar_no_campaign">No Offers Currently</string>
+    <string name="buttonbar_campaign">Special Offers Now!</string>
+    <string name="toast_favorite_added">Added to Favorites! You will now receive notifications from
+        this business.</string>
+    <string name="toast_favorite_removed">Business has been removed from your Favorites list.</string>
+    <string name="button_save_business">Save</string>
+    <string name="button_unsave_business">Unsave</string>
+    <string name="toast_save_business">Business added to saved list!</string>
+    <string name="toast_remove_saved">Business removed from saved list!</string>
+    <string name="campaign_icon_content_description">Icon to indicate availability of special offers</string>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+     Filter Related Strings
+     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <!-- FilterActivity related strings -->
+    <string name="filter_task_name">Filters</string>
+    <string name="filter_preset_clear">Clear All</string>
+    <string name="filter_recall_filter">Recall Filter</string>
+    <string name="filter_save_filter">Save Filter</string>
+    <string name="filter_apply">Apply</string>
+    <string name="filter_none_exists_toast">No filter has been saved</string>
+    <string name="filter_saved_toast">Filter saved!</string>
+    <string name="filter_failure_toast">CityApp encountered a fatal error (code = 101)</string>
+    <string name="filter_failure_toast_2">CityApp encountered a fatal error (code = 102)</string>
+
+    <!-- Filters preset strings -->
+    <string name="filter_preset_header">Standard Filters</string>
+    <string name="filter_preset_favorites">Favorites</string>
+    <string name="filter_preset_saved">Saved</string>
+    <string name="filter_preset_special">Special Deals</string>
+    <string-array name="filter_preset_types">
+        <item>@string/filter_preset_favorites</item>
+        <item>@string/filter_preset_saved</item>
+        <item>@string/filter_preset_special</item>
+    </string-array>
+
+    <!-- Filters location strings (see "City specific strings" below) -->
+
+    <!-- Filters top strings -->
+    <string name="filter_prompt">All</string>
+    <string name="filter_prompt_negative">None</string>
+    <string name="filter_top_level">Category Filters</string>
+    <string name="entertainment_category_name">Entertainment</string>
+    <string name="food_category_name">Food</string>
+    <string name="health_category_name">Health</string>
+    <string name="home_garden_category_name">Home and Garden</string>
+    <string name="pet_category_name">Pet</string>
+    <string name="retail_category_name">Retail</string>
+    <string-array name="filter_categories">
+        <item>@string/filter_prompt</item>
+        <item>@string/entertainment_category_name</item>
+        <item>@string/food_category_name</item>
+        <item>@string/health_category_name</item>
+        <item>@string/home_garden_category_name</item>
+        <item>@string/pet_category_name</item>
+        <item>@string/retail_category_name</item>
+    </string-array>
+
+    <!-- Filters secondary strings -->
+    <!-- Important Note: Arrays should be named such that the resource ID can be constructed from
+         the array entries in FilterActivity. This means the last part of the array name should
+         match the name in the filter_categories array above -->
+    <string name="filter_second_level">Secondary Filters</string>
+    <string-array name="filter_second_homeandgarden">
+        <item>@string/filter_prompt</item>
+        <item>Furniture</item>
+        <item>Hardware</item>
+        <item>Heating and Air</item>
+        <item>Pool</item>
+        <item>Remodeling</item>
+        <item>Yard</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="filter_second_pet">
+        <item>@string/filter_prompt</item>
+        <item>Groomers</item>
+        <item>Resort\/Spa</item>
+        <item>Supplies</item>
+        <item>Veterinary</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="filter_second_health">
+        <item>@string/filter_prompt</item>
+        <item>Acupuncture</item>
+        <item>Beauty Salons</item>
+        <item>Bowen</item>
+        <item>CBD</item>
+        <item>Chiropractor</item>
+        <item>Dentist</item>
+        <item>Dermatology</item>
+        <item>Doctor</item>
+        <item>Herbal Medicine</item>
+        <item>Message Therapy</item>
+        <item>Orthodontist</item>
+        <item>Pharmacy</item>
+        <item>Spa</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="filter_second_entertainment">
+        <item>@string/filter_prompt</item>
+        <item>Kid Friendly</item>
+        <item>Indoors</item>
+        <item>Outdoors</item>
+    </string-array>
+    <string-array name="filter_second_food">
+        <item>@string/filter_prompt</item>
+        <item>American</item>
+        <item>BBQ</item>
+        <item>Chinese</item>
+        <item>Coffee</item>
+        <item>French</item>
+        <item>Italian</item>
+        <item>Japanese</item>
+        <item>Mexican</item>
+        <item>Steakhouse</item>
+        <item>Tex-Mex</item>
+        <item>Thai</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="filter_second_retail">
+        <item>@string/filter_prompt</item>
+        <item>Clothing</item>
+        <item>Sporting Goods</item>
+        <item>Jewelry</item>
+        <item>Other</item>
+    </string-array>
+
+    <!-- Filters tertiary strings -->
+    <string name="filter_tertiary">Additional Options</string>
+    <string name="filter_special_label">Special Considerations</string>
+    <string-array name="filter_food_special">
+        <item>@string/filter_prompt_negative</item>
+        <item>Gluten-Free Options</item>
+        <item>Locally Sourced</item>
+        <item>Paleo</item>
+        <item>Vegan</item>
+        <item>Vegetarian</item>
+    </string-array>
+    <string name="filter_atmosphere_label">Dining Atmosphere</string>
+    <string-array name="filter_food_atmosphere">
+        <item>@string/filter_prompt</item>
+        <item>Fast</item>
+        <item>Casual</item>
+        <item>Upscale</item>
+    </string-array>
+    <string name="filter_price_label">Price</string>
+    <string name="price_code_1">$ - Under $10</string>
+    <string name="price_code_2">$$ - Under $25</string>
+    <string name="price_code_3">$$$ - Under $50</string>
+    <string name="price_code_4">$$$$ - Above $50</string>
+    <string-array name="filter_food_price">
+        <item>@string/filter_prompt</item>
+        <item>@string/price_code_1</item>
+        <item>@string/price_code_2</item>
+        <item>@string/price_code_3</item>
+        <item>@string/price_code_4</item>
+    </string-array>
+
+    <!-- Sort strings -->
+    <string name="sort_header">Sorting Options</string>
+    <string name="sort_name_ascending">Business Name (ascending)</string>
+    <string name="sort_name_descending">Business Name (descending)</string>
+    <!-- NOTE: The order of this array is treated by the Filter POJO as an enum. Maintain strict
+         ordering of this array! -->
+    <string-array name="sort_options">
+        <item>@string/sort_name_ascending</item>
+        <item>@string/sort_name_descending</item>
+    </string-array>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+     User Information Related Strings
+     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <!-- Placeholder name for Manifest (since same Activity has multiple uses) -->
+    <string name="placeholder_name">Placeholder</string>
+    <string name="about_cityapp_name">About CityApp</string>
+    <string name="version_label">CityApp Version:</string>
+    <string name="seascale_email_address" translatable="false">seascale_consulting_llc@gmail.com</string>
+    <string name="email_invitation">Email CityApp at:</string>
+    <string name="customer_teaser">List Your Business With Us!</string>
+    <string name="cityapp_information_1">If you are a business owner interested in maximizing your
+        marketing dollar, please send us an email at the link below and someone from our team will
+        respond within two business days. We\'d love to have you on-board!
+    </string>
+    <string name="problem_reporting">To Report A Problem:</string>
+    <string name="cityapp_information_2">CityApp supports local small businesses and thinks you
+        should too! Help us to improve CityApp by sending to us your comments and suggestions. If
+        you experience a crash or other performance related issue while using our app please let us
+        know by sending us an email (link below). When doing so please include the following
+        information:
+    </string>
+    <string name="enum_1" translatable="false">1)</string>
+    <string name="problem_item_1">CityApp version number (listed below)</string>
+    <string name="enum_2" translatable="false">2)</string>
+    <string name="problem_item_2">A description of what you were doing in the app when you
+        experienced the problem (e.g. \"I was performing a search for all Tex-Mex restaurants with
+        vegetarian options\")
+    </string>
+    <string name="enum_3" translatable="false">3)</string>
+    <string name="problem_item_3">A description of the problem encountered</string>
+    <string name="enum_4" translatable="false">4)</string>
+    <string name="problem_item_4">The manufacturer name and model of the device you are using</string>
+    <string name="enum_5" translatable="false">5)</string>
+    <string name="problem_item_5">The version of the Android OS running on your device</string>
+    <string name="user_privacy_name">User Privacy Policy</string>
+    <string name="user_privacy_policy">CityApp strives to provide a safe and enjoyable means for
+        consumers to support local small businesses. Vital to this objective is the protection of
+        all users of the application, both consumers and small business owners. In support of this
+        goal CityApp does not collect, store, transmit or otherwise use any Personally Identifiable
+        Information (PII) nor does it make such information available to other entities. CityApp
+        does record businesses marked as "favorites" or "saved" by the user as a means of helping
+        local small businesses maximize their marketing effectiveness. Nevertheless, this data is
+        presented in aggregate form as raw numbers with no means of tracing selections back to the
+        users themselves.</string>
+    <string name="eula_name">License Agreement</string>
+    <string name="end_user_license_agreement" translatable="false">
+        ----------------------------------------------------\n
+        END-USER LICENSE AGREEMENT\n
+        ----------------------------------------------------\n\n
+        Last updated: January 29, 2020\n\nUse of CityApp (the “Application”) is contingent upon your
+        consent to this End-User License Agreement (the “Agreement”). The ensuing agreement pertains
+        to you (the “User”) and Seascale Consulting. The act of downloading, installing, or using
+        the Application binds the User to the conditions outlined in this Agreement.\n\n
+        ----------------------------------------------------\n
+        LICENSE\n
+        ----------------------------------------------------\n\nSeascale Consulting grants the User
+        a revocable, non­exclusive, non­transferable, limited license to download, install and use
+        the Application strictly in accordance with the terms of this Agreement.\n\n
+        ----------------------------------------------------\n
+        RESTRICTIONS\n
+        ----------------------------------------------------\n\nThe User agrees not to modify, copy,
+        publish, license, sell, rent, lease, assign, distribute, transmit, host, outsource, disclose
+        or otherwise commercially exploit the Application or make the Application available to any
+        third party for monetary compensation.\n\nThe User agrees to use the Application in a manner
+        consistent with all federal, state, and local laws, regulations, and ordinances. Third-party
+        terms of agreement are in no way abrogated by the use of this Application.\n\nThe User\'s
+        right to use the Application terminates with any failure to comply with the provisions
+        contained in this Agreement.\n\n
+        ----------------------------------------------------\n
+        INTELLECTUAL PROPERTY\n
+        ----------------------------------------------------\n\nThe User agrees not to
+        reverse-engineer, alter, adapt, decompile, or derive variations from the Application.\n\n
+        Seascale Consulting retains all ownership, licensing, titles, and interests appertaining to
+        the Application. These include copyright, trade secret, patent, and proprietary rights. The
+        Application itself and associated renewals, updates, upgrades, and expansions are included
+        therein.\n\nNames, products, and services of companies listed in CityApp may be trademarks
+        of their respective companies.\n\n
+        ----------------------------------------------------\n
+        DISCLAIMER OF WARRANTY\n
+        ----------------------------------------------------\n\nTHIS APPLICATION IS PROVIDED WITHOUT
+        ANY WARRANTIES OR GUARANTEES, WHETHER EXPRESS OR IMPLIED, AND IS PROVIDED “AS IS”. SEASCALE
+        CONSULTING DISCLAIMS, TO THE DEGREE PERMITTED BY LAW, ALL WARRANTIES RELATED TO
+        AVAILABILITY, RELIABILITY, ACCURACY, APPLICABILITY, AND SECURITY OF THIS APPLICATION.\n\n
+        ----------------------------------------------------\n
+        LIMITATION OF LIABILITY\n
+        ----------------------------------------------------\n\nTHE USER AGREES TO DOWNLOAD,
+        INSTALL, AND USE THIS APPLICATION AT THE USER\'S OWN RISK. SEASCALE CONSULTING SHALL NOT BE
+        HELD LIABLE FOR ANY HARDWARE, OS, OR OTHER DAMAGE, DATA LOSS, OR PERFORMANCE LOSS INCURRED
+        IN CONJUNCTION WITH THIS APPLICATION.\n\nSEASCALE CONSULTING SHALL NOT BE HELD LIABLE FOR
+        HARM OCCURRING TO THE USER IN THE COURSE OF THE USE OR MISUSE OF THE APPLICATION, RELIANCE
+        UPON THE APPLICATION, OR INABILITY TO USE THE APPLICATION. THIS INCLUDES DIRECT, INDIRECT,
+        INCIDENTAL, CONSEQUENTIAL, SPECIAL, EXEMPLARY, AND PUNITIVE DAMAGES, REGARDLESS OF THE BASIS
+        (CONTRACT, TORT, OR OTHER).\n\n
+        ----------------------------------------------------\n
+        INDEMNIFICATION\n
+        ----------------------------------------------------\n\nTHE USER AGREES TO INDEMNIFY AND
+        HOLD THE OFFICERS, DIRECTORS, AGENTS, AND EMPLOYEES OF SEASCALE CONSULTING HARMLESS FROM ANY
+        THIRD-PARTY CLAIM RESULTING FROM VIOLATION OF THE AGREEMENT.\n\n
+        ----------------------------------------------------\n
+        MODIFICATIONS TO APPLICATION\n
+        ----------------------------------------------------\n\nSeascale Consulting reserves the
+        right to modify, suspend or discontinue, temporarily or permanently, the Application or any
+        service to which it connects, with or without notice and without liability to the User.\n\n
+        ----------------------------------------------------\n
+        TERM AND TERMINATION\n
+        ----------------------------------------------------\n\nThis Agreement shall remain in
+        effect until terminated by the User or Seascale Consulting.\n\nSeascale Consulting may, in
+        its sole discretion, at any time and for any or no reason, suspend or terminate this
+        Agreement with or without prior notice.\n\nThis Agreement will terminate immediately,
+        without prior notice from Seascale Consulting, if the User fails to comply with any
+        provision of this Agreement. The User may also terminate this Agreement by deleting the
+        Application and all copies thereof from the User\'s device(s).\n\nUpon termination of this
+        Agreement, the User shall cease all use of the Application and delete all copies of the
+        Application from the User\'s device(s).\n\n
+        ----------------------------------------------------\n
+        SEVERABILITY\n
+        ----------------------------------------------------\n\nIf any provision of this Agreement
+        is held to be unenforceable or invalid, such provision will be changed and interpreted to
+        accomplish the objectives of such provision to the greatest extent possible under applicable
+        law and the remaining provisions will continue in full force and effect.\n\n
+        ----------------------------------------------------\n
+        AMENDMENTS TO THIS AGREEMENT\n
+        ----------------------------------------------------\n\nSeascale Consulting reserves the
+        right, at its sole discretion, to modify or replace this Agreement at any time. If a
+        revision is material, we will provide at least 30 days\' notice prior to any new terms
+        taking effect. What constitutes a material change will be determined at our sole discretion.
+        \n\n
+        ----------------------------------------------------\n
+        CONTACT INFORMATION\n
+        ----------------------------------------------------\n\nIf the User has any questions about
+        this Agreement, please contact us.
+    </string>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+     City Specific Strings
+     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <!-- Austin specific strings -->
+    <string name="austin_name" translatable="false">austin</string>
+    <string name="austin_slogan" translatable="false">Keep Austin Austin</string>
+    <string name="austin_iv_content_description">Austin city photo by M.J. Tangonan on Unsplash</string>
+    <!-- Filters location strings -->
+    <string name="filter_location_header">Location Filters</string>
+    <string-array name="austin_locations" translatable="false">
+        <item>Leander</item>
+        <item>RoundRock</item>
+        <item>Georgetown</item>
+        <item>CedarPark</item>
+        <item>Downtown</item>
+        <item>Pflugerville</item>
+        <item>WestLake</item>
+        <item>OakHill</item>
+        <item>SunsetValley</item>
+        <item>EastAustin</item>
+        <item>Lakeway\/Beecave</item>
+        <item>SouthCongress</item>
+    </string-array>
+</resources>
